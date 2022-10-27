@@ -1,9 +1,16 @@
 <?php
-    header('Content-type: application/json');
+    
     $url = isset($_GET['url']) ? $_GET['url'] : "";
     
     if(empty($url))
+	{
+		echo "Please provide Smule-URL!";
         exit(false);
+	}
+	else
+	{
+		header('Content-type: application/json');
+	}
 	
 	
 	$useragents = array(
